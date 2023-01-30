@@ -6,7 +6,10 @@ import { Link } from "react-router-dom";
 
 import { getAllStarships } from "../../services/sw-api";
 
-
+// const handleClick= evt => {
+//   evt.preventDefault()
+//   props.handleSpellSearch(formData)
+// }
 
 const StarshipList = () => {
   const [starshiplist, setStarshipList]  = useState([])
@@ -19,13 +22,18 @@ const StarshipList = () => {
     fetchStarshipList()
   }, [])
 
+const handleClick =  () => {
+  
+}
+
+
   return ( 
     <div className="card-container">
     {starshiplist.length ?
       <>
       {starshiplist.map(starship =>
-        <div key={(starship.url)}>
-          <Link to='/starship' state={{starship}} key={starship.name}>
+        <div key={(starship.url)} onClick={handleClick}>
+          <Link style={{ textDecoration:'none' }}  to='/starship' state={{starship}} key={starship.name}>
               <button className="Card">{starship.name}</button>
           </Link> 
         </div>

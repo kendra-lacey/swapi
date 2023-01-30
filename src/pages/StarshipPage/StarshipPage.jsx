@@ -21,12 +21,15 @@ const StarshipPage = () => {
   },[location.state.starship.url])
 
   return ( 
-    <div>
-      <h3>starship DEETZ</h3>
+    <div className="details-card">
+
+    <div className="card">
+      <h3 >starship DEETZ</h3>
       <h3>NAME:{starshipPage.name}</h3>
       <h3>MODEL:{starshipPage.model}</h3>
       <h3>HYPERDRIVE RATING:{starshipPage.hyperdrive_rating}</h3>
       <Link to='/'>GO BACK TO FLEET</Link>
+    </div>
     </div>
 );
 }

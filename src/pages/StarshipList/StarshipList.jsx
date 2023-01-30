@@ -24,8 +24,8 @@ const StarshipList = () => {
     {starshiplist.length ?
       <>
       {starshiplist.map(starship =>
-        <div key={(starship.index)}>
-          <Link to='/' state={{starship}}>
+        <div key={(starship.url)}>
+          <Link to='/starship' state={{starship}} key={starship.name}>
               <button className="Card">{starship.name}</button>
           </Link> 
         </div>
